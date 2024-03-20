@@ -2,6 +2,7 @@
 // alert("welcome to Tech365");
 // alert("this is a pop up");
 
+
 // document.write("Hello world" + "</br>");
 // document.write(2+4);
 
@@ -10,8 +11,8 @@
 
 // input
 
+ 
 // prompt("How old are you?");
-
 // 2. variable
 // var x = 5;
 // let firstName = "John";
@@ -44,9 +45,8 @@
 // 5. variable is case sensitive
 
 // 3. data types - what type of data we are storing or accessing
-
+let address = "43 Hebert Macauly Way, Off Univerisity Road, Akoka Yaba Lagos State";
 // strings - are sequence of characters denoted by '' or ""
-// let address = "70c Allen Avenue, Ikeja, Lagos"
 // let data = "123456789"
 // console.log(typeof address)
 // console.log(typeof x)
@@ -57,7 +57,7 @@
 // console.log(address.length)
 
 // indexing a string
-// console.log(address[2]);
+// console.log(address[1]);
 // console.log(address[29]);
 // console.log(address[address.length - 1]);
 
@@ -68,16 +68,17 @@
 // string methods - functions you can perform on strings
 // console.log(address.replace("Lagos","Dubai"));
 // console.log(address.concat(data));
-// console.log(address.indexOf("Ikeja"));
+// console.log(address.indexOf("Akoka"));
 // console.log(address.lastIndexOf("A"));
 // console.log(address.indexOf("A"));
 // console.log(address.includes("A"));
 // console.log(address.toUpperCase());
+// console.log(address.indexOf("Way"))
 // console.log(address.slice(0,18) + address.slice(18,23).toUpperCase() + address.slice(23));
 // console.log(address.startsWith('W'));
-// console.log(address.charAt(1));
-// console.log(address.search("Ikeja"))
-// console.log(address.split(" "));
+// console.log(address.charAt(2));
+// console.log(address.search("Lagos"));
+// console.log(address.split(" ").reverse().join(" "));
 // console.log(address.substring(18,23));
 
 // let letter = ["a", "b", "c"]
@@ -94,8 +95,7 @@
 // 4. what are the ways to declare variables and the differences between them?
 // 5. What are the ways to identify a string?
 // 6. How do I know the position of "s" in simple from the words above?
-// 7. what is the difference between java and javascript (you are allowed to research)?
-// 8. create a program that gets 3 numbers from users and multiplies the 3 numbers together and shows the answer in the console
+// 7. create a program that gets 3 numbers from users and multiplies the 3 numbers together and shows the answer in the console
 
 // console.log(words.replace("simple","easy"));;
 // console.log(words.length);
@@ -110,12 +110,12 @@
 // console.log(num1 * num2 * num3);
 
 // array - for storing multiple values in a variable (mutable)
-// let colors = ["red", "blue", "green"]
+let colors = ["red", "blue", "green", "yellow", "blue"]
 // let numbers = [1, 2, 3, 4, 5]
-// console.log(colors.length);
+console.log(colors.length);
 
 //indexing an array
-// console.log(colors.slice(2,3));
+// console.log(colors.slice(1,4));
 // console.log(colors[2]);
 
 // slicing array
@@ -124,7 +124,8 @@
 
 // colors.push("purple"); // add new item at the end
 // console.log(colors);
-// console.log(colors.join("-")); // join to convert array to string
+
+// console.log(colors.join(" ")); // Remove new item from the square bracket
 // colors.pop(); // remove last item
 // console.log(colors);
 // colors.shift(); // remove first item
@@ -138,7 +139,7 @@
 // let info = colors.concat(numbers)
 // console.log(info);
 
-// colors.splice(0,2,"orange","pink"); // add item at a particular position
+// colors.splice(0,2,"orange", "green","pink"); // add item at a particular position
 // console.log(colors);
 // colors[0] = "black"; // change item at a particular position
 // console.log(colors);
@@ -151,9 +152,9 @@
 // colors.reverse(); // reverse the array
 // console.log(colors);
 
-// demo = "abc";
+// let demo = "abc";
 // console.log(demo.slice(3,1));
-// console.log(demo.substring(3,1));
+// console.log(demo.substring(3,2));
 
 // object - unordered key-value pairs (mutable)
 
@@ -189,8 +190,8 @@
 // console.log(typeof pageView);
 // console.log(pageView);
 
-// console.log(score.toFixed(1))
-// console.log(score.toPrecision(2));
+// console.log(score.toFixed())
+// console.log(score.toPrecision(3));
 
 
 // undefined 
@@ -581,10 +582,17 @@
 // higher order function
 // map
 // data = [1,2,3,4,5,6,7,8,9]
+// console.log(data.map((x) => x > 2) );
 // console.log(data.map(x => x));
+// console.log(data.filter((x).reduce((u, y)=> u * y) ));
 
 // filter
+
+
 // console.log(data.filter(x => x % 2 == 0));
+
+
+
 
 // let movies = ["titanic", "superman", "troy", "harry potter", "avengers", "the flash", "tradition"]
 
@@ -1123,38 +1131,38 @@
 
 // 4. Write a JavaScript program that creates a class called University with properties for university name and departments. Include methods to add a department, remove a department, and display all departments. Create an instance of the University class and add and remove departments.
 
-class University {
-    constructor() {
-      this.name = '';
-      this.departments = [];
-    }
+// class University {
+//     constructor() {
+//       this.name = '';
+//       this.departments = [];
+//     }
   
-    addDepartment(department) {
-      this.departments.push(department);
-      console.log("Department added");
-    }
+//     addDepartment(department) {
+//       this.departments.push(department);
+//       console.log("Department added");
+//     }
   
-    removeDepartment(department) {
-      if (this.departments.includes(department)) {
-        this.departments.splice(this.departments.indexOf(department), 1);
-        console.log("Department removed");
-      } else {
-        console.log("Department not found");
-      }
-    }
+//     removeDepartment(department) {
+//       if (this.departments.includes(department)) {
+//         this.departments.splice(this.departments.indexOf(department), 1);
+//         console.log("Department removed");
+//       } else {
+//         console.log("Department not found");
+//       }
+//     }
   
-    displayDepartments() {
-      if (this.departments.length > 0) {
-        console.log("Departments:");
-        this.departments.forEach(dept => console.log(dept));
-      } else {
-        console.log("No departments to display");
-      }
-    }
-  }
+//     displayDepartments() {
+//       if (this.departments.length > 0) {
+//         console.log("Departments:");
+//         this.departments.forEach(dept => console.log(dept));
+//       } else {
+//         console.log("No departments to display");
+//       }
+//     }
+//   }
   
-  const dept1 = new University('depare');
-  console.log(dept1)
+//   const dept1 = new University('depare');
+//   console.log(dept1)
 //   while (true) {
 //     const action = prompt("Enter A to add dept, R to remove dept, D to display departments, or Q to quit");
   
